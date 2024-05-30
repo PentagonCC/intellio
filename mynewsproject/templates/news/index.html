@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelio - новостной агрегатор</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'news/styles.css' %}">
+</head>
+<body>
+    <div class="header">
+        <img src="https://i.ibb.co/sWHtCbW/Intelio.png" alt="Логотип сайта" class="logo">
+        <h1>Intelio - новостной агрегатор</h1>
+        <a href="https://t.me/Intelio_news" class="telegram-button" target="_blank">
+            <img src="https://archa-zarplata.ru/images/telegram8.png" alt="Telegram Icon">
+            Присоединяйтесь к нам в Telegram
+        </a>
+    </div>
+    <div id="news-container">
+        {% for mynewsproject in page_obj %}
+        <div class="news-item">
+            <img src="{{ mynewsproject.imageUrl }}" alt="{{ mynewsproject.title }}">
+            <h2>{{ mynewsproject.title }}</h2>
+            <p class="category">{{ mynewsproject.category }}</p>
+            <p>{{ mynewsproject.date }}</p>
+            <p class="short-text">{{ mynewsproject.content|truncatechars:150 }}</p>
+            <a href="{{ mynewsproject.source }}" target="_blank">Источник</a>
+        </div>
+        {% empty %}
+        <p>Больше новостей нет.</p>
+        {% endfor %}
+    </div>
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; первая</a>
+                <a href="?page={{ page_obj.previous_page_number }}">предыдущая</a>
+            {% endif %}
+
+            <span class="current">
+                Страница {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}.
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">следующая</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">последняя &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</body>
+</html>

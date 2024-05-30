@@ -1,0 +1,272 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0d28;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(135deg, #2980b9, #2c3e50);
+}
+
+.logo {
+    width: 100px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.telegram-button {
+    display: flex;
+    align-items: center;
+    background-color: #0088cc;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.telegram-button img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.telegram-button:hover {
+    background-color: #005580;
+}
+
+#news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    background-color: #1e2b42;
+}
+
+.news-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.news-item h2 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.news-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.news-item a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #007BFF;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+    color: #0056b3;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.step-links {
+    display: flex;
+    gap: 10px;
+}
+
+.step-links a {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.step-links a:hover {
+    background-color: #0056b3;
+}
+
+.step-links .current {
+    padding: 5px 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0a0d28;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(135deg, #2980b9, #2c3e50);
+}
+
+.logo {
+    width: 100px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+}
+
+.telegram-button {
+    display: flex;
+    align-items: center;
+    background-color: #0088cc;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.telegram-button img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.telegram-button:hover {
+    background-color: #005580;
+}
+
+#news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 20px;
+    background-color: #1e2b42;
+}
+
+.news-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.news-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.news-item h2 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.news-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.news-item a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #007BFF;
+    margin-top: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.news-item a:hover {
+    color: #0056b3;
+}
+
+.show-more-btn {
+    display: block;
+    margin: 10px auto;
+    padding: 8px 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background-color: #0056b3;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.step-links {
+    display: flex;
+    gap: 10px;
+}
+
+.step-links a {
+    padding: 5px 10px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.step-links a:hover {
+    background-color: #0056b3;
+}
+
+.step-links .current {
+    padding: 5px 10px;
+    background-color: #ccc;
+    border-radius: 5px;
+}
