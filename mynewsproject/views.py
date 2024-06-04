@@ -1,5 +1,4 @@
 import requests
-from django.http import JsonResponse
 from django.shortcuts import render
 from django.core.paginator import Paginator
 
@@ -9,7 +8,7 @@ def fetch_news(last_news_id=None):
     api_key = "0203infinity2024"
     params = {
         'api': api_key,
-        'count': 10000,
+        'count': 1000,
     }
     if last_news_id:
         params['last_news_id'] = last_news_id
@@ -27,9 +26,3 @@ def index(request):
     page_obj = paginator.get_page(page_number)
 
     return render(request, 'news/index.html', {'page_obj': page_obj})
-
-
-def load_news(request):
-    last_news_id = request.GET.get('last_news_id')
-    news_list = fetch_news(last_news_id)
-    return JsonResponse({'new_news': news_list})
